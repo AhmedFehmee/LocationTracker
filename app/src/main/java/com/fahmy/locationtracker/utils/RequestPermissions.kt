@@ -1,4 +1,4 @@
-package com.fahmy.locationtracker
+package com.fahmy.locationtracker.utils
 
 import android.Manifest
 import android.app.Activity
@@ -9,16 +9,6 @@ import com.tbruyelle.rxpermissions2.RxPermissions
 class RequestPermissions {
 
     companion object {
-
-        fun isLocationEnabled(context: Context): Boolean {
-            val locationManager =
-                context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-
-            val gpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
-            val networkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
-
-            return gpsEnabled || networkEnabled
-        }
 
         fun requirePermission(context: Activity): Boolean {
 
